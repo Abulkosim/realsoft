@@ -9,7 +9,7 @@
 
 <style scoped>
 .card-container {
-  @apply max-w-5xl mx-auto grid grid-cols-3 gap-1.5 my-4
+  @apply max-w-5xl mx-auto my-4 px-3 grid gap-1.5 grid-cols-1 ss:grid-cols-2 md:grid-cols-3
 }
 
 .card {
