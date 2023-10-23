@@ -33,7 +33,7 @@ const key = 'u9fK2wHosa-xHNkpqldYTnYZrDBiLObD3kCln1Vq7h8';
 const cards = ref([])
 
 async function unsplash() {
-  const response = await fetch(`${link}/photos?per_page=6&client_id=${key}&order_by=popular`);
+  const response = await fetch(`${link}/photos?per_page=3&client_id=${key}&order_by=popular`);
   const imgs = await response.json();
   for (let img of imgs) {
     cards.value.push(img.links.download)
