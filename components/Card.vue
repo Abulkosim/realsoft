@@ -39,6 +39,7 @@ async function unsplash() {
     cards.value.push(img.links.download)
   }
 }
+
 unsplash()
 
 </script>
