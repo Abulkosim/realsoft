@@ -39,11 +39,18 @@ export const signOut = async () => {
 
 export const user = async () => {
   const auth = getAuth();
+  const firebaseUser: any = useFirebaseUser();
+
+  firebaseUser.value = auth.currentUser;
+
   onAuthStateChanged(auth, (user) => {
     if (user) {
       const uid = user.uid;
-      console.log(user);
+      console.log("Changed ", user);
     } else {
+      console.log("Changed ", user);
     }
+
+    firebaseUser.value = user;
   });
 };

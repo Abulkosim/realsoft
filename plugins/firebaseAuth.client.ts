@@ -8,5 +8,6 @@ export default defineNuxtPlugin((nuxtApp) => {
   };
   const app = initializeApp(firebaseConfig);
 
+  user();
   console.log(app);
 });
