@@ -45,7 +45,6 @@ export const user = async () => {
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      const uid = user.uid;
     } else {
     }
 

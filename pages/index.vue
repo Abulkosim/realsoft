@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p><NuxtLink to="/secret">Secret Page</NuxtLink></p>
+    <p>
+      <NuxtLink to="/secret">Secret Page</NuxtLink>
+    </p>
     <button @click="login" v-if="!firebaseUser">Login</button>
     <button @click="logout" v-if="firebaseUser">Logout</button>
     <div v-if="firebaseUser">
