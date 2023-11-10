@@ -44,10 +44,6 @@ export const user = async () => {
   firebaseUser.value = auth.currentUser;
 
   onAuthStateChanged(auth, (user) => {
-    if (user) {
-    } else {
-    }
-
     firebaseUser.value = user;
   });
 };

@@ -19,7 +19,7 @@
 <script setup>
 import { ref } from 'vue'
 useHead({
-  title: 'Images'
+  title: 'Project'
 })
 
 definePageMeta({
