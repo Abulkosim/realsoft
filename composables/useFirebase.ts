@@ -3,10 +3,12 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
+  sendEmailVerification,
 } from "firebase/auth";
 
 export const signUp = async (email, password) => {
   const auth = getAuth();
+
   const credentials = await createUserWithEmailAndPassword(
     auth,
     email,
@@ -15,6 +17,9 @@ export const signUp = async (email, password) => {
     const errorCode = error.code;
     const errorMessage = error.message;
   });
+
+  sendEmailVerification(auth.currentUser);
+
   return credentials;
 };
 
