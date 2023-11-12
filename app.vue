@@ -3,7 +3,7 @@
     <NuxtPage v-if="firebaseUser" />
 
     <div v-if="!firebaseUser">
-      <Firebase title="Sign up" @submit="signup" :form="signupForm" />
+      <!-- <Firebase title="Sign up" @submit="signup" :form="signupForm" /> -->
       <Firebase title="Sign in" @submit="signin" :form="signinForm" />
     </div>
 
@@ -28,7 +28,10 @@ const signup = async () => {
 };
 </script>
 
-<style scoped> button {
-   @apply border-2 p-2 border-gray-700
- }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 </style>
