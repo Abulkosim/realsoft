@@ -50,5 +50,8 @@ export const user = async () => {
 
   onAuthStateChanged(auth, (user) => {
     firebaseUser.value = user;
+    if (!firebaseUser.value?.uid) {
+      return navigateTo("/");
+    }
   });
 };

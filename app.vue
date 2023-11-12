@@ -1,11 +1,12 @@
 <template>
   <div>
+    <NuxtPage v-if="firebaseUser" />
+
     <div v-if="!firebaseUser">
       <Firebase title="Sign up" @submit="signup" :form="signupForm" />
       <Firebase title="Sign in" @submit="signin" :form="signinForm" />
     </div>
 
-    <NuxtPage v-if="firebaseUser" />
   </div>
 </template>
 
