@@ -1,6 +1,7 @@
 <template>
-  <div class="sm:flex sm:items-center sm:justify-center px-4 py-8 min-h-screen select-none sm:bg-[#6416C5]">
-    <div class="flex flex-col rounded-lg bg-white sm:shadow-lg gap-4 p-6 sm:p-11 sm:px-16 max-w-xl mx-auto sm:w-[576px]">
+  <div class="relative sm:flex sm:items-center sm:justify-center px-4 py-8 min-h-screen select-none sm:bg-[#6416C5]">
+    <div
+      class="flex flex-col rounded-lg bg-white sm:shadow-lg gap-4 p-6 sm:p-11 sm:px-16 max-w-xl mx-auto sm:w-[576px] z-10">
       <h2 class="text-2xl font-bold text-start min-[400px]:text-3xl min-[400px]:text-center mb-2">{{ title }}
       </h2>
 
@@ -35,6 +36,8 @@
       </div>
 
     </div>
+    <div class="hidden sm:block absolute bg-[#6d24c8] w-52 h-52 -top-6 -left-2 rotate-12 rounded-2xl"></div>
+    <div class="hidden sm:block absolute bg-[#6d24c8] w-52 h-52 bottom-8 -right-12 rotate-12 rounded-2xl"></div>
   </div>
 </template>
 
