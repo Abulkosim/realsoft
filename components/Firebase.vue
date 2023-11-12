@@ -1,32 +1,40 @@
 <template>
-  <div class="grid place-items-center h-screen bg-[#6416C5] select-none">
-    <div class="flex flex-col rounded-lg bg-white shadow-lg gap-4 p-11 px-16 w-[576px]">
-      <h2 class="text-3xl font-bold text-center">Tizimga kirish</h2>
+  <div class="sm:flex sm:items-center sm:justify-center px-4 py-8 min-h-screen select-none sm:bg-[#6416C5]">
+    <div class="flex flex-col rounded-lg bg-white sm:shadow-lg gap-4 p-6 sm:p-11 sm:px-16 max-w-xl mx-auto sm:w-[576px]">
+      <h2 class="text-2xl font-bold text-start min-[400px]:text-3xl min-[400px]:text-center mb-2">{{ title }}
+      </h2>
 
       <div>
-        <label for="email" class="text-lg font-semibold">Login</label>
-        <div class="relative border-[1px] border-[#DADADA] rounded-md mt-2">
+        <label for="email" class="text-lg font-semibold">Email</label>
+        <div class="relative border-[1px] border-[#DADADA] rounded-md mt-1">
           <ph-user :size="24" color="#969696" class="absolute top-3.5 left-3 select-none" />
-          <input type="email" name="email" id="email" placeholder="Kiritish"
+          <input v-model="form.email" type="email" name="email" id="email" placeholder="Kiritish"
             class="w-full outline-none pl-11 p-3 rounded-md text-lg text-gray-600">
         </div>
       </div>
 
       <div>
         <label for="password" class="text-lg font-semibold">Parol</label>
-        <div class="relative border-[1px] border-[#DADADA] rounded-md mt-2">
+        <div class="relative border-[1px] border-[#DADADA] rounded-md mt-1">
           <ph-lock-key :size="24" color="#969696" class="absolute top-3.5 left-3 select-none" />
-          <input :type="showHide" name="password" id="password" placeholder="Parol"
+          <input v-model="form.password" :type="showHide" name="password" id="password" placeholder="Parol"
             class="w-full outline-none px-11 p-3 rounded-md text-lg text-gray-600">
-          <ph-eye-slash @click="show = !show" :size="24" color="#969696" class="absolute top-3.5 right-3 select-none" />
+          <ph-eye-slash @click="show = !show" :size="24" color="#969696"
+            class="absolute top-3.5 right-3 select-none cursor-pointer" />
         </div>
       </div>
 
-      <button class="bg-[#3C09E5] font-semibold text-white p-4 rounded-md hover:bg-[#1b09e5e3]outline-none">Tizimga kirish</button>
-      <button class="bg-[#0B0B2C] font-semibold text-white p-4 rounded-md hover:bg-[#0b0b2ce7]outline-none">Ro'yxatdan o'tish</button>
+      <div class="flex flex-col gap-4 sm:mt-2" :class="type">
+        <button
+          class="bg-[#3C09E5] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#1b09e5e3]outline-none"
+          @click="$emit('signin')">Tizimga kirish</button>
+        <button
+          class="bg-[#0B0B2C] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#0b0b2ce7]outline-none"
+          @click="$emit('signup')">Ro'yxatdan
+          o'tish</button>
+      </div>
 
     </div>
-    <!-- <button @click="$emit('submit')">Submit</button> -->
   </div>
 </template>
 
@@ -38,6 +46,10 @@ const props = defineProps({
   form: Object,
   title: String,
 });
+
+const type = computed(() => {
+  return props.title == 'Tizimga kirish' ? 'flex-col' : 'flex-col-reverse'
+})
 
 let show = ref(false)
 

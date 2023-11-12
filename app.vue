@@ -3,14 +3,18 @@
     <NuxtPage v-if="firebaseUser" />
 
     <div v-if="!firebaseUser">
-      <!-- <Firebase title="Sign up" @submit="signup" :form="signupForm" /> -->
-      <Firebase title="Sign in" @submit="signin" :form="signinForm" />
+      <Firebase v-if="!log" title="Ro'yxatdan o'tish" @signup="signup" @signin="log = !log" :form="signupForm" />
+      <Firebase v-if="log" title="Tizimga kirish" @signin="signin" @signup="log = !log" :form="signinForm" />
     </div>
 
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+useHead({
+  title: 'Project'
+})
 
 const signupForm = ref({ email: "", password: "" });
 const signinForm = ref({ email: "", password: "" });
@@ -26,6 +30,8 @@ const signup = async () => {
   signUp(signupForm.value.email, signupForm.value.password);
   signupForm.value = { email: "", password: "" };
 };
+
+const log = ref(false)
 </script>
 
 <style>

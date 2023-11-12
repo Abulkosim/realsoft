@@ -12,10 +12,6 @@
 </template>
 
 <script setup>
-useHead({
-  title: 'Project'
-})
-
 definePageMeta({
   middleware: ["auth"]
 })
