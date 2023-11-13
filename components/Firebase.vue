@@ -43,7 +43,7 @@
 </template>
 
 <script setup>
-import { PhUser, PhLockKey, PhEyeSlash, PhCopyright } from "@phosphor-icons/vue";
+import { PhUser, PhLockKey, PhEyeSlash } from "@phosphor-icons/vue";
 import { ref, computed } from 'vue'
 
 const props = defineProps({
