@@ -25,7 +25,7 @@
         </div>
       </div>
 
-      <div class="flex flex-col gap-4 sm:mt-2" :class="type">
+      <div class="flex flex-col gap-4 mt-2 mb-4" :class="type">
         <button
           class="bg-[#3C09E5] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#1b09e5e3]outline-none"
           @click="$emit('signin')">Tizimga kirish</button>
@@ -35,6 +35,7 @@
           o'tish</button>
       </div>
 
+      <span class="text-center">© REALSOFT 2023</span>
     </div>
     <div class="hidden sm:block absolute bg-[#6d24c8] w-52 h-52 -top-6 -left-2 rotate-12 rounded-2xl"></div>
     <div class="hidden sm:block absolute bg-[#6d24c8] w-52 h-52 bottom-8 -right-12 rotate-12 rounded-2xl"></div>
@@ -42,7 +43,7 @@
 </template>
 
 <script setup>
-import { PhUser, PhLockKey, PhEyeSlash } from "@phosphor-icons/vue";
+import { PhUser, PhLockKey, PhEyeSlash, PhCopyright } from "@phosphor-icons/vue";
 import { ref, computed } from 'vue'
 
 const props = defineProps({
