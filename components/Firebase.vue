@@ -27,10 +27,10 @@
 
       <div class="flex flex-col gap-4 mt-2 mb-4" :class="type">
         <button
-          class="bg-[#3C09E5] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#1b09e5e3]outline-none"
+          class="bg-[#3C09E5] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#1b09e5e3] outline-none"
           @click="$emit('signin')">Tizimga kirish</button>
         <button
-          class="bg-[#0B0B2C] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#0b0b2ce7]outline-none"
+          class="bg-[#0B0B2C] font-medium sm:font-semibold text-white p-4 rounded-md hover:bg-[#0b0b2ce7] outline-none"
           @click="$emit('signup')">Ro'yxatdan
           o'tish</button>
       </div>
