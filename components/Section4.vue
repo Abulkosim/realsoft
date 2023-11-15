@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto pt-20 pb-32 flex items-center gap-14 bg-white">
+  <div class="max-w-6xl px-5 mx-auto pt-20 pb-32 flex items-center gap-14 bg-white">
 
     <div class="basis-1/2 flex flex-col gap-4">
       <h3 class="text-[#0047FF] font-semibold">TIZIMNIK AFZALLIKLARI</h3>

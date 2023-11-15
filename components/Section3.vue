@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#F5F5F5] py-14">
-    <div class="max-w-screen-2xl mx-auto flex items-center gap-14">
+    <div class="max-w-screen-2xl px-5 mx-auto flex items-center gap-14">
       <div class="basis-1/2 rounded-lg shadow-md">
         <img src="../assets/images/image 3.png" alt="Image" class="rounded-lg">
       </div>

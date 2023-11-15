@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#F5F5F5] py-20">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl px-5 mx-auto">
       <div class="max-w-xl mx-auto bg-white p-10 rounded-t-xl shadow-xl">
         <h2 class="text-3xl font-semibold mb-12 text-center">Kredit kalkulyatori</h2>
         <div class="flex flex-col gap-5">
