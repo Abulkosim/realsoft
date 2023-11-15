@@ -1,12 +1,9 @@
 <template>
   <div>
     <div>
-      <p>Secret</p>
+      <p>Testing</p>
     </div>
     <div v-if="firebaseUser">
-      <pre>
-{{ firebaseUser }}
-    </pre>
     </div>
     <div v-else>
       <p>You have signed out!</p>

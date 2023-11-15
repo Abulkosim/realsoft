@@ -5,9 +5,8 @@
     <Section3 />
     <Section4 />
     <Section5 />
-
     <!-- <p>
-      <NuxtLink to=" /secret">Secret Page</NuxtLink>
+      <NuxtLink to="/testing">Testing Page</NuxtLink>
     </p>
     <div v-if="firebaseUser">
       <p>Firebase Auth Current User</p>
