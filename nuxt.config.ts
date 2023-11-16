@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: "/realsoft",
+    baseURL: "/realsoft/",
     buildAssetsDir: "assets",
   },
   devtools: { enabled: true },
