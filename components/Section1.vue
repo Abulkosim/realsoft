@@ -6,7 +6,6 @@
     </div>
     <div class="z-10 text-white">
 
-
       <div class="max-w-6xl px-5 mx-auto h-24 flex items-center justify-between">
         <div class="flex items-center gap-2 cursor-pointer select-none">
           <img src="../assets/images/logo.svg" alt="Logo">
@@ -22,10 +21,15 @@
             <a href="#" class="cursor-pointer">Loyihalar</a>
             <a href="#" class="cursor-pointer">Qo'llanma</a>
             <a href="#" class="cursor-pointer">Aloqa</a>
-            <div
-              class="cursor-pointer flex items-center justify-center gap-3 bg-[#FF8A00] hover:bg-[#FF8A00dd] rounded-3xl p-3 w-48">
+            <div v-if="!firebaseUser"
+              class="cursor-pointer flex items-center justify-center gap-2 bg-[#FF8A00] hover:bg-[#FF8A00dd] rounded-3xl p-3 w-48">
               <ph-user :size="24" />
               <span>Tizimga kirish</span>
+            </div>
+            <div v-if="firebaseUser" @click="signOut"
+              class="cursor-pointer flex items-center justify-center gap-2 bg-[#FF8A00] hover:bg-[#FF8A00dd] rounded-3xl p-3 w-52">
+              <ph-user :size="24" />
+              <span>Tizimdan chiqish</span>
             </div>
           </div>
           <div @click.stop class="relative">
@@ -39,10 +43,15 @@
                 <a href="#" class="cursor-pointer">Loyihalar</a>
                 <a href="#" class="cursor-pointer">Qo'llanma</a>
                 <a href="#" class="cursor-pointer">Aloqa</a>
-                <div
-                  class="cursor-pointer flex items-center justify-center gap-3 bg-[#6416C5] hover:bg-[#6416C5ee] text-white rounded-3xl p-3 w-48">
+                <div v-if="!firebaseUser"
+                  class="cursor-pointer flex items-center justify-center gap-2 bg-[#6416C5] hover:bg-[#6416C5ee] text-white rounded-3xl p-3 w-48">
                   <ph-user :size="24" />
                   <span>Tizimga kirish</span>
+                </div>
+                <div v-if="firebaseUser" @click="signOut"
+                  class="cursor-pointer flex items-center justify-center gap-2 bg-[#FF8A00] hover:bg-[#FF8A00dd] rounded-3xl p-3 w-52 text-white">
+                  <ph-user :size="24" />
+                  <span>Tizimdan chiqish</span>
                 </div>
               </div>
             </Transition>
@@ -106,6 +115,9 @@
 <script setup>
 import { PhUser, PhPlay, PhList } from '@phosphor-icons/vue';
 import { ref } from 'vue'
+
+const firebaseUser = useFirebaseUser();
+import { signOut } from "../composables/useFirebase";
 
 const showMenu = ref(false)
 

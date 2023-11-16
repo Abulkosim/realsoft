@@ -14,4 +14,5 @@ export default defineNuxtConfig({
       FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
     },
   },
+  modules: ["@vueuse/motion/nuxt"],
 });

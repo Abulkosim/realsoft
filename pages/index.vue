@@ -1,18 +1,10 @@
 <template>
   <div>
-    <Section1 />
-    <Section2 />
-    <Section3 />
-    <Section4 />
-    <Section5 />
-    <!-- <p>
-      <NuxtLink to="/testing">Testing Page</NuxtLink>
-    </p>
-    <div v-if="firebaseUser">
-      <p>Firebase Auth Current User</p>
-      <pre>{{ firebaseUser }}</pre>
-    </div>
-    <button @click="signOut">Sign out</button> -->
+    <Section1 v-motion-fade />
+    <Section2 v-motion-slide-visible-once-bottom />
+    <Section3 v-motion-slide-visible-once-bottom />
+    <Section4 v-motion-slide-visible-once-bottom />
+    <Section5 v-motion-fade/> 
   </div>
 </template>
 
@@ -20,8 +12,4 @@
 definePageMeta({
   middleware: ["auth"]
 })
-
-import { signOut } from "../composables/useFirebase";
-
-const firebaseUser = useFirebaseUser();
 </script>
