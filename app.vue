@@ -40,4 +40,8 @@ const log = ref(false)
 * {
   font-family: 'Montserrat', sans-serif;
 }
+
+.monospace span {
+  font-family: monospace;
+}
 </style>
