@@ -1,10 +1,11 @@
 <template>
-  <div class="relative sm:flex sm:items-center sm:justify-center px-4 py-8 min-h-screen select-none sm:bg-[rgb(100,22,197)]">
+  <div
+    class="relative sm:flex sm:items-center sm:justify-center px-4 py-8 min-h-screen select-none sm:bg-[rgb(100,22,197)]">
     <div v-motion-fade
       class="flex flex-col rounded-lg bg-white sm:shadow-lg gap-4 p-6 sm:p-11 sm:px-16 max-w-xl mx-auto sm:w-[576px] z-10">
       <h2 class="text-2xl font-bold text-start min-[400px]:text-3xl min-[400px]:text-center mb-2">{{ title }}
       </h2>
-
+      
       <div>
         <label for="email" class="text-lg font-semibold">Email</label>
         <div class="relative border-[1px] border-[#DADADA] rounded-md mt-1">
