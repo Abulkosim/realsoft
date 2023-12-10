@@ -5,7 +5,7 @@
       class="flex flex-col rounded-lg bg-white sm:shadow-lg gap-4 p-6 sm:p-11 sm:px-16 max-w-xl mx-auto sm:w-[576px] z-10">
       <h2 class="text-2xl font-bold text-start min-[400px]:text-3xl min-[400px]:text-center mb-2">{{ title }}
       </h2>
-      
+
       <div>
         <label for="email" class="text-lg font-semibold">Email</label>
         <div class="relative border-[1px] border-[#DADADA] rounded-md mt-1">
@@ -36,7 +36,6 @@
           o'tish</button>
       </div>
 
-      <span class="text-center">© REALSOFT 2023</span>
     </div>
     <div class="hidden sm:block absolute bg-[#6d24c8] w-52 h-52 -top-6 -left-2 rotate-12 rounded-2xl"></div>
     <div class="hidden sm:block absolute bg-[#6d24c8] w-52 h-52 bottom-8 -right-12 rotate-12 rounded-2xl"></div>

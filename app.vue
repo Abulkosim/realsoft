@@ -13,7 +13,7 @@
 <script setup>
 import { ref } from 'vue'
 useHead({
-  title: 'Project'
+  title: 'Axborot Tizimi'
 })
 
 const signupForm = ref({ email: "", password: "" });
